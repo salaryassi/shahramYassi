@@ -219,7 +219,7 @@ export default async function Home() {
           آموزش نقشه برداری صنعتی
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            نقشه برداری صنعتی
+        نقشه برداری صنعتی در اینجا متنی کوتاه میتواند باشد در مودرد آموزش
           </p>
         </FadeIn>
       </Container>
@@ -232,9 +232,10 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        نقشه برداری صنعتی در اینجا متنی کوتاه میتواند باشد در مودرد آموزش
+        نقشه برداری صنعتی در اینجا متنی کوتاه میتواند باشد در مودرد آموزش
+        نقشه برداری صنعتی در اینجا متنی کوتاه میتواند باشد در مودرد آموزش
+
       </Testimonial>
 
       <Services />
