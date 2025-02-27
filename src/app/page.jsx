@@ -19,37 +19,68 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
+import hormozgancementThumbnail from '@/images/thumbnails/rasmio.jpg'
+import tappicoThumbnail from '@/images/thumbnails/rasmio.jpg'
+import rasmioThumbnail from '@/images/rasmio.jpg' 
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
+  {
+    name: 'Hormozgan Cement',
+    thumbnail: hormozgancementThumbnail,
+    url: 'https://hormozgancement.com/',
+  },
+  {
+    name: 'Tappico',
+    thumbnail: tappicoThumbnail,
+    url: 'https://www.tappico.com/',
+  },
+  {
+    name: 'Rasmio',
+    thumbnail: rasmioThumbnail,
+    url: 'https://rasmio.com/',
+  },
+];
+
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56" dir="rtl">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+          <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <h2 className="text-right font-display text-sm font-semibold tracking-wider text-white sm:text-right">
+            با سرشناس ترین مجموعه ها کار کرده ایم
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            {clients.map((client) => (
+              <li key={client.name}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <a
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
+                    <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white text-lg font-semibold">
+                          Visit Website
+                        </span>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-center text-white font-medium">
+                      {client.name}
+                    </p>
+                  </a>
                 </FadeIn>
               </li>
             ))}
@@ -57,7 +88,7 @@ function Clients() {
         </FadeInStagger>
       </Container>
     </div>
-  )
+  );
 }
 
 function CaseStudies({ caseStudies }) {
@@ -177,15 +208,18 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+      <Container className="mt-44 sm:mt-32 md:mt-56 "dir="rtl">
+        <FadeIn className="max-w-3xl ">
+               {/* Add the Google Fonts link dynamically */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+          <h1 className="font-ibm-plex-sans-arabic text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+          آموزش نقشه برداری صنعتی
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            نقشه برداری صنعتی
           </p>
         </FadeIn>
       </Container>

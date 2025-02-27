@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -27,8 +27,10 @@ module.exports = {
           ['Mona Sans', ...defaultTheme.fontFamily.sans],
           { fontVariationSettings: '"wdth" 125' },
         ],
+        // Add IBM Plex Sans Arabic as a new font family
+        'ibm-plex-sans-arabic': ['IBM Plex Sans Arabic', ...defaultTheme.fontFamily.sans],
       },
     },
   },
   plugins: [],
-}
+};
